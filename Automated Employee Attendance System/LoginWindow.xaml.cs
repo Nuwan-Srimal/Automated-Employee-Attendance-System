@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Automated_Employee_Attendance_System.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,50 @@ namespace Automated_Employee_Attendance_System
         public LoginWindow()
         {
             InitializeComponent();
+            SeedAdmin();
             ThemeManager.ApplyTheme(this);
+        }
+
+
+        void SeedAdmin()
+        {
+            var users = UserService.Load();
+            if (!users.Any())
+            {
+                users.Add(new Models.User
+                {
+                    Username = "admin",
+                    PasswordHash = UserService.Hash("admin"),
+                    Dashbord = true,
+                    Employee = true,
+                    Attendance = true,
+                    Report = true,
+                    Settings = true
+
+                });
+                UserService.Save(users);
+            }
+        }
+
+        private async void Login_Click(object sender, RoutedEventArgs e)
+        {
+            var users = UserService.Load();
+
+            var user = users.FirstOrDefault(u =>
+                u.Username == UserName.Text &&
+                u.PasswordHash == UserService.Hash(Password.Password));
+
+            if (user == null)
+            {
+                CustomMessageBox.Show("Invalid login");
+                return;
+            }
+
+            ((Button)sender).IsEnabled = false;
+
+            // ✅ ONLY HERE Home opens
+            new MainWindow(user).Show();
+            Close();
         }
     }
 }

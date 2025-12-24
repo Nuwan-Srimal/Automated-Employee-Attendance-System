@@ -1,19 +1,9 @@
-﻿using System.Text;
+﻿using Automated_Employee_Attendance_System.Models;
 using System.Windows;
-using System.Drawing;
-using System.IO;
-
 using System.Windows.Controls;
-using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
-
-using System.Windows.Data;
-using System.Windows.Documents;
-
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Automated_Employee_Attendance_System
 {
@@ -22,20 +12,38 @@ namespace Automated_Employee_Attendance_System
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private User _user;
+
+        public MainWindow(User user)
         {
             InitializeComponent();
+            _user = user;
+            ApplyAccess();
             ThemeManager.ApplyTheme(this);
         }
 
 
 
-        #region Navigation
 
+        void ApplyAccess()
+        {
+            Dashbord_Tab.Visibility = _user.Dashbord ? Visibility.Visible : Visibility.Collapsed;
+            Employee_Tab.Visibility = _user.Employee ? Visibility.Visible : Visibility.Collapsed;
+            Attendance_Tab.Visibility = _user.Attendance ? Visibility.Visible : Visibility.Collapsed;
+            Report_Tab.Visibility = _user.Report ? Visibility.Visible : Visibility.Collapsed;
+            Settings_Tab.Visibility = _user.Settings ? Visibility.Visible : Visibility.Collapsed;
+          
+        }
+
+
+
+
+
+
+        #region Navigation
 
         private void EmployeeWindow_Click(object sender, RoutedEventArgs e) => LoadView(new EmployeeWindow());
         private void Settings_Click(object sender, RoutedEventArgs e) => LoadView(new SettingsWindow());
-
 
         private void LoadView(UserControl view)
         {
@@ -65,6 +73,5 @@ namespace Automated_Employee_Attendance_System
         }
 
         #endregion
-
     }
 }

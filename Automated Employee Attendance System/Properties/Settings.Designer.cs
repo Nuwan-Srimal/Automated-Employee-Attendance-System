@@ -34,5 +34,29 @@ namespace Automated_Employee_Attendance_System.Properties {
                 this["AppTheme"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool SendDailyReport {
+            get {
+                return ((bool)(this["SendDailyReport"]));
+            }
+            set {
+                this["SendDailyReport"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool SendAttendanceEmails {
+            get {
+                return ((bool)(this["SendAttendanceEmails"]));
+            }
+            set {
+                this["SendAttendanceEmails"] = value;
+            }
+        }
     }
 }

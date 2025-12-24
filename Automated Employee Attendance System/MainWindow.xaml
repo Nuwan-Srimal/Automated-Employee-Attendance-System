@@ -71,7 +71,7 @@
             <StackPanel Grid.Row="1">
 
                 <!-- Dashboard -->
-                <RadioButton Height="44" Width="260"
+                <RadioButton x:Name="Dashbord_Tab" Height="44" Width="260"
                  Style="{StaticResource SelectableRadioButtonStyle}">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="&#xE80F;"
@@ -88,7 +88,7 @@
                 </RadioButton>
 
                 <!-- Employee -->
-                <RadioButton Height="44" Width="260"
+                <RadioButton x:Name="Employee_Tab" Height="44" Width="260"
                  IsChecked="True"
                  Click="EmployeeWindow_Click"
                  Style="{StaticResource SelectableRadioButtonStyle}">
@@ -107,7 +107,7 @@
                 </RadioButton>
 
                 <!-- Attendance -->
-                <RadioButton Height="44" Width="260"
+                <RadioButton x:Name="Attendance_Tab" Height="44" Width="260"
                  Style="{StaticResource SelectableRadioButtonStyle}">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="&#xE8A5;"
@@ -115,7 +115,7 @@
                        FontSize="18"
                        
                        VerticalAlignment="Center"/>
-                        <TextBlock Text="Attendance"
+                        <TextBlock  Text="Attendance"
                        FontSize="14"
                        FontWeight="SemiBold"
                        Margin="12,0,0,0"
@@ -124,7 +124,7 @@
                 </RadioButton>
 
                 <!-- Reports -->
-                <RadioButton Height="44" Width="260"
+                <RadioButton x:Name="Report_Tab" Height="44" Width="260"
                  Style="{StaticResource SelectableRadioButtonStyle}">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="&#xE9D2;"
@@ -141,7 +141,7 @@
                 </RadioButton>
 
                 <!-- Settings -->
-                <RadioButton Height="44" Width="260"
+                <RadioButton x:Name="Settings_Tab" Height="44" Width="260"
                  Click="Settings_Click"
                  Style="{StaticResource SelectableRadioButtonStyle}">
                     <StackPanel Orientation="Horizontal">
