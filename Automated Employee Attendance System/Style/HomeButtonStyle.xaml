@@ -48,7 +48,7 @@
 
             <!-- Selected -->
             <Trigger Property="IsChecked" Value="True">
-                <Setter Property="Background" Value="#FFE2E2E2"/>
+                <Setter Property="Background" Value="#330660FE"/>
                 <Setter Property="Foreground" Value="#0660FE"/>
                 
             </Trigger>

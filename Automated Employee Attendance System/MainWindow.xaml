@@ -22,7 +22,7 @@
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="100" />
+                <RowDefinition Height="150" />
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
@@ -30,86 +30,152 @@
 
 
             <StackPanel Grid.Row="0">
-                <Image Source="/UI/Logo.png" Width="200" Margin="75,20,75,20"/>
+               
+
+                    <StackPanel Margin="30" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+
+                        <!-- Avatar -->
+                        <Grid Width="66" Height="66">
+                            <Ellipse Fill="#F2C1AE"/>
+                            <Border
+                Width="30"
+                Height="30"
+                Background="#FFFFFF"
+                CornerRadius="4"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
+                        </Grid>
+
+                        <!-- Text Section -->
+                        <StackPanel Margin="16,0,0,0" VerticalAlignment="Center">
+
+                            <TextBlock
+                Text="Admin Portal"
+                FontSize="24"
+                FontWeight="SemiBold"
+                Foreground="{DynamicResource Forground}"/>
+
+                            <TextBlock
+                Text="Attendance System"
+                FontSize="14"
+                Foreground="#8A8A8A"
+                Margin="0,4,0,0"/>
+
+                        </StackPanel>
+
+                    </StackPanel>
+           
+
             </StackPanel>
 
             <StackPanel Grid.Row="1">
 
+                <!-- Dashboard -->
                 <RadioButton Height="44" Width="260"
                  Style="{StaticResource SelectableRadioButtonStyle}">
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="/UI/Dashbord.png" Width="24"/>
-                        <TextBlock VerticalAlignment="Center"
-                       Text="Dashboard"
+                        <TextBlock Text="&#xE80F;"
+                       FontFamily="Segoe MDL2 Assets"
+                       FontSize="18"
+                       
+                       VerticalAlignment="Center"/>
+                        <TextBlock Text="Dashboard"
                        FontSize="14"
                        FontWeight="SemiBold"
-                       Margin="8,0,0,0"/>
+                       Margin="12,0,0,0"
+                       VerticalAlignment="Center"/>
                     </StackPanel>
                 </RadioButton>
 
-                <RadioButton Click="EmployeeWindow_Click"
-                 Height="44" Width="260"
+                <!-- Employee -->
+                <RadioButton Height="44" Width="260"
                  IsChecked="True"
+                 Click="EmployeeWindow_Click"
                  Style="{StaticResource SelectableRadioButtonStyle}">
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="/UI/EmployeeS.png" Width="24"/>
-                        <TextBlock VerticalAlignment="Center"
-                       Text="Employee"
+                        <TextBlock Text="&#xE77B;"
+                       FontFamily="Segoe MDL2 Assets"
+                       FontSize="18"
+                       
+                       VerticalAlignment="Center"/>
+                        <TextBlock Text="Employee"
                        FontSize="14"
                        FontWeight="SemiBold"
-                       Margin="8,0,0,0"/>
+                       Margin="12,0,0,0"
+                       VerticalAlignment="Center"/>
                     </StackPanel>
                 </RadioButton>
 
+                <!-- Attendance -->
                 <RadioButton Height="44" Width="260"
                  Style="{StaticResource SelectableRadioButtonStyle}">
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="/UI/Attendance.png" Width="24"/>
-                        <TextBlock VerticalAlignment="Center"
-                       Text="Attendance"
+                        <TextBlock Text="&#xE8A5;"
+                       FontFamily="Segoe MDL2 Assets"
+                       FontSize="18"
+                       
+                       VerticalAlignment="Center"/>
+                        <TextBlock Text="Attendance"
                        FontSize="14"
                        FontWeight="SemiBold"
-                       Margin="8,0,0,0"/>
+                       Margin="12,0,0,0"
+                       VerticalAlignment="Center"/>
                     </StackPanel>
                 </RadioButton>
 
+                <!-- Reports -->
                 <RadioButton Height="44" Width="260"
                  Style="{StaticResource SelectableRadioButtonStyle}">
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="/UI/Report.png" Width="24"/>
-                        <TextBlock VerticalAlignment="Center"
-                       Text="Reports"
+                        <TextBlock Text="&#xE9D2;"
+                       FontFamily="Segoe MDL2 Assets"
+                       FontSize="18"
+                       
+                       VerticalAlignment="Center"/>
+                        <TextBlock Text="Reports"
                        FontSize="14"
                        FontWeight="SemiBold"
-                       Margin="8,0,0,0"/>
+                       Margin="12,0,0,0"
+                       VerticalAlignment="Center"/>
                     </StackPanel>
                 </RadioButton>
 
-                <RadioButton Click="Settings_Click" Height="44" Width="260"
+                <!-- Settings -->
+                <RadioButton Height="44" Width="260"
+                 Click="Settings_Click"
                  Style="{StaticResource SelectableRadioButtonStyle}">
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="/UI/Settings.png" Width="24"/>
-                        <TextBlock VerticalAlignment="Center"
-                       Text="Settings"
+                        <TextBlock Text="&#xE713;"
+                       FontFamily="Segoe MDL2 Assets"
+                       FontSize="18"
+                       
+                       VerticalAlignment="Center"/>
+                        <TextBlock Text="Settings"
                        FontSize="14"
                        FontWeight="SemiBold"
-                       Margin="8,0,0,0"/>
+                       Margin="12,0,0,0"
+                       VerticalAlignment="Center"/>
                     </StackPanel>
                 </RadioButton>
 
             </StackPanel>
 
 
+
             <StackPanel Height="100"  VerticalAlignment="Bottom" Grid.Row="2">
-                <Line X1="0" Y1="0" X2="350" Y2="0" Stroke="Gray" StrokeThickness="1" />
-                <TextBlock Text="Arduino Conected" FontSize="18" TextAlignment="Center" FontWeight="SemiBold" Margin="6" Foreground="Green"/>
+                <Line X1="0" Y1="0" X2="350" Y2="0" Stroke="Gray" StrokeThickness="0.5" />
+
+                <Border Margin="10" Width="250" BorderBrush="#35D499" Background="#3335D499"  BorderThickness="1" CornerRadius="5">
+                    <TextBlock Text="📶 Arduino Conected" FontSize="15" TextAlignment="Center" FontWeight="SemiBold" Margin="6" Foreground="#35d499"/>
+                </Border>
+                
                 <TextBlock Text="Version 1.0.0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,6,0,0" FontSize="12" Foreground="Gray"/>
-                <TextBlock Text="© 2024 Automated Employee Attendance System" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,0" FontSize="12" Foreground="Gray"/>
+                <TextBlock Text="© 2025 Automated Employee Attendance System" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,0" FontSize="12" Foreground="Gray"/>
             </StackPanel>
 
         </Grid>
 
-        <Grid Background="#FFECECEC" Grid.Column="1">
+        <Grid Background="{DynamicResource ContBackground}" Grid.Column="1">
             <Border CornerRadius="20">
                 <ContentControl  Margin="20" x:Name="MainContent"   Background="Transparent"  />
             </Border>

@@ -26,7 +26,7 @@
                 <StackPanel>
 
                     <StackPanel Margin="30">
-                        <TextBlock Foreground="Black" Text="Enoll New Employee Fingerprint" 
+                        <TextBlock Foreground="{DynamicResource Forground}" Text="Enoll New Employee Fingerprint" 
 VerticalAlignment="Center" 
 HorizontalAlignment="Left" 
 FontSize="25" 
@@ -49,10 +49,10 @@ FontWeight="Regular"/>
                             <StackPanel Margin="30" Grid.Column="0">
 
 
-                                <Border Background="White"
+                                <Border Background="{DynamicResource Background}"
             CornerRadius="12"
             Padding="20"
-            BorderBrush="#E5E7EB"
+            BorderBrush="{DynamicResource BorderBrush}"
             BorderThickness="1">
 
                                     <StackPanel>
@@ -64,7 +64,7 @@ FontWeight="Regular"/>
                            Margin="0,0,8,0" Foreground="#FF0660FE"/>
                                             <TextBlock Text="Employee Details"
                            FontSize="18"
-                           FontWeight="Bold" Foreground="Black"/>
+                           FontWeight="Bold" Foreground="{DynamicResource Forground}"/>
                                         </StackPanel>
 
                                         <!-- Row 1 -->
@@ -78,11 +78,9 @@ FontWeight="Regular"/>
                                             <StackPanel>
                                                 <TextBlock Text="Employee ID" FontSize="12" Foreground="Gray"/>
                                                 <TextBox Style="{DynamicResource TextBoxStyle}"
-                             Height="35"
-                             Padding="10"
-                             IsReadOnly="True"
-                             Background="#F9FAFB"
-                             BorderBrush="#D1D5DB"/>
+                            
+                            
+                            />
                                             </StackPanel>
 
                                             <StackPanel Grid.Column="2">
@@ -107,18 +105,16 @@ FontWeight="Regular"/>
 
                                             <StackPanel>
                                                 <TextBlock Text="First Name" FontSize="12" Foreground="Gray"/>
-                                                <TextBox Style="{DynamicResource TextBoxStyle}" Text="John"
-                             Height="35"
-                             Padding="10"
-                             BorderBrush="#D1D5DB"/>
+                                                <TextBox Style="{DynamicResource TextBoxStyle}" 
+                             
+                           />
                                             </StackPanel>
 
                                             <StackPanel Grid.Column="2">
                                                 <TextBlock Text="Last Name" FontSize="12" Foreground="Gray"/>
-                                                <TextBox Style="{DynamicResource TextBoxStyle}" Text="Doe"
-                             Height="35"
-                             Padding="10"
-                             BorderBrush="#D1D5DB"/>
+                                                <TextBox Style="{DynamicResource TextBoxStyle}" 
+                         
+                            />
                                             </StackPanel>
                                         </Grid>
 
@@ -137,9 +133,9 @@ FontWeight="Regular"/>
 
                             <StackPanel Margin="30" Grid.Column="1">
 
-                                <Border Background="White"
+                                <Border Background="{DynamicResource Background}"
             CornerRadius="14"
-            BorderBrush="#E5E7EB"
+            BorderBrush="{DynamicResource BorderBrush}"
             BorderThickness="1">
 
                                     <Grid>
@@ -150,13 +146,14 @@ FontWeight="Regular"/>
                                         </Grid.RowDefinitions>
 
                                         <!-- Header -->
-                                        <Border Background="#F9FAFB"
+                                        <Border 
                     Padding="15"
-                                                CornerRadius="15"
-                    BorderBrush="#E5E7EB"
+                                            BorderThickness="0,0,0,1"
+                                                
+                    BorderBrush="{DynamicResource BorderBrush}"
                     >
                                             <DockPanel >
-                                                <TextBlock HorizontalAlignment="Left" Foreground="Black" Text="Scanner Interface"
+                                                <TextBlock HorizontalAlignment="Left" Foreground="{DynamicResource Forground}" Text="Scanner Interface"
                                FontSize="16"
                                FontWeight="SemiBold"
                                DockPanel.Dock="Left"/>
@@ -182,10 +179,10 @@ FontWeight="Regular"/>
                                             <Border Width="220"
                         Height="280"
                         CornerRadius="14"
-                        BorderBrush="#CBD5E1"
+                        BorderBrush="{DynamicResource BorderBrush}"
                         BorderThickness="2"
                         
-                        Background="#FFFFFF">
+                        Background="{DynamicResource Background}">
 
                                                 <StackPanel VerticalAlignment="Center"
                                 HorizontalAlignment="Center">
@@ -224,7 +221,7 @@ FontWeight="Regular"/>
                                         <!-- Footer Button -->
                                         <Border Grid.Row="2"
                     Padding="15"
-                    BorderBrush="#E5E7EB"
+                    BorderBrush="{DynamicResource BorderBrush}"
                     BorderThickness="0,1,0,0">
 
                                             <Button Height="44"
