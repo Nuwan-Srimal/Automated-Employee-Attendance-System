@@ -111,6 +111,7 @@
               Foreground="White"
               FontWeight="SemiBold"
               BorderThickness="0"
+                                IsDefault="True"
               Cursor="Hand">
                             <Button.Template>
                                 <ControlTemplate TargetType="Button">
